@@ -1,23 +1,17 @@
 
-<h1>{{user.name}}</h1>
 
-     
-<!-- one way binding {{}}  სტრინგის ინტერპოლაციაა -->
-
-
-
-<h1>{{sayHello}}</h1>
-
-<button (click)="print()" >Click</button>
-<!-- ინვენთ ბაინდინგი  ()-->
+<header>
+    <app-header></app-header>
+</header>
 
 
-<img [src]="imgSorce" alt=""
-    [class]="imgClass"  [style]="imgStyle">
+<main>
 
-    
-    <button class="btn btn-danger">dddddddddd</button>
+    <app-main></app-main>
+
+</main>
 
 
-
-<!-- ფროფერთი ბაინდინგი [] -->
+<footer>
+    <app-footer></app-footer>
+</footer>
