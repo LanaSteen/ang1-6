@@ -1,0 +1,40 @@
+<p>home works!</p>
+
+
+
+<input type="text" [(ngModel)]="title">
+<button (click)="save()">Save</button>
+
+
+
+<button (click)="deleteAll()">Delete All</button>
+
+
+  <!-- სტუქტურლი დრირექტიბა -->
+
+  <h1  *ngIf="showError">Fill input</h1>
+
+  <button (click)="showHideList()">Show List</button>
+
+<ol *ngIf="showList">
+    <li  *ngFor="let el of namesArr let i=index" >
+         {{el}}   
+        <button (click)="delete(i)">Delete</button>
+     </li>
+</ol>
+
+<br>
+
+
+<input type="text" [(ngModel)]="userName">
+<input type="text" [(ngModel)]="userLastName">
+<button (click)="add()">Add</button>
+
+
+
+<div class="box" *ngFor="let el of userArr">
+    <span>{{el.name  }}  </span> 
+    <span>{{el.lastName}}</span>
+</div>
+
+
