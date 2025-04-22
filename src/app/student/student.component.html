@@ -1,0 +1,33 @@
+
+
+
+<!-- <form action=""> -->
+    <input type="text" [(ngModel)]="student.name">
+
+    <input type="text" [(ngModel)]="student.age">
+
+    <input type="text" [(ngModel)]="student.email">
+
+    <input type="text" [(ngModel)]="student.adress.city">
+
+    <input type="text" [(ngModel)]="student.adress.street">
+
+    <input type="text" [(ngModel)]="student.adress.zip">
+    <button (click)="addStudent()">Save</button>
+<!-- </form> -->
+
+
+<div class="list">
+    <div class="card" style="width: 18rem;" *ngFor="let student of studentArr">
+        <div class="card-body">
+          <h5 class="card-title">{{student.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">{{student.age}}</h6>
+          <p class="card-text">{{student.email}}</p>
+          <p class="card-text">{{student.adress.city}}</p>
+          <p class="card-text">{{student.adress.street}}</p>
+          <p class="card-text">{{student.adress.zip}}</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+</div>
