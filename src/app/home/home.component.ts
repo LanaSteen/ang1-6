@@ -26,7 +26,7 @@ export class HomeComponent {
   }
 
 
-
+  showUsers = false
   namesArr : string[] = []
   title = ""
 
@@ -38,8 +38,13 @@ export class HomeComponent {
   }
   showHideList(){
     this.showList ? this.showList = false : this.showList = true
+
+    this.showUsers ? this.showUsers = false : this.showUsers = true
+
+    this.listShows == "hide" ? this.listShows = "show" : this.listShows = "hide"
   }
 
+  listShows = "hide"
   save(){
       // this.title !="" ? this.namesArr.push(this.title) : this.showError = true
 
