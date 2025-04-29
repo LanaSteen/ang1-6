@@ -1,0 +1,12 @@
+
+
+
+
+<div class="card" style="width: 18rem;" *ngFor="let el of products">
+    <img [src]="el.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{el.title}}</h5>
+      <p class="card-text">{{el.category}}</p>
+      <a routerLink="/products/{{el.id}}" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>

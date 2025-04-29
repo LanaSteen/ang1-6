@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './users.component.scss'
 })
 export class UsersComponent {
-public usersData: User[] = [
+ usersData: User[]= [
     {
       "id": 7,
       "email": "michael.lawson@reqres.in",
