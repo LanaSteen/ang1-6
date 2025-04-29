@@ -8,5 +8,6 @@
       <h5 class="card-title">{{el.title}}</h5>
       <p class="card-text">{{el.category}}</p>
       <a routerLink="/products/{{el.id}}" class="btn btn-primary">Go somewhere</a>
+      <a routerLink="/products/{{el.id}}/{{el.category}}" class="btn btn-primary">Go See All {{el.category}}</a>
     </div>
   </div>

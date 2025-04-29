@@ -1,1 +1,19 @@
-<p>porducts-detail works!</p>
+<div class="card" style="width: 18rem;" >
+    <img [src]="singlePorduct?.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{singlePorduct?.title}}</h5>
+      <p class="card-text">{{singlePorduct?.category}}</p>
+      <a routerLink="/products" class="btn btn-primary">Go Back</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" *ngFor="let el of filtrerdeProduct">
+    <img [src]="el.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{el.title}}</h5>
+      <p class="card-text">{{el.category}}</p>
+      <a routerLink="/products/{{el.id}}" class="btn btn-primary">Go somewhere</a>
+      <a routerLink="/products/{{el.id}}/{{el.category}}" class="btn btn-primary">Go See All {{el.category}}</a>
+    </div>
+  </div>
+
