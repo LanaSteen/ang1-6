@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonService } from '../services/common.service';
+import { ApiService } from '../services/api.service';
+import { Product } from '../Models/Product';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +13,18 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+  constructor(private common : CommonService, private api : ApiService){
+
+  }
+
+  ngOnInit(){
+    this.api.getProducts().subscribe((resp: any) => {
+      console.log(resp)
+      this.productArr = resp
+
+    })
+  }
 
   userName = ""
   userLastName = ""
@@ -67,4 +82,34 @@ export class HomeComponent {
      this.title = ""
      this.showError = false
   }
+
+
+
+  printHi(){
+
+    this.common.print()
+    this.common.printUserName(this.user)
+  }
+
+
+  user : string = ""
+
+  showUserName(){
+    this.common.printUserName("Jonh")
+  }
+
+
+  productArr : Product[] = []
+
+  getProducts(){
+    this.api.getProducts().subscribe((resp: any) => {
+      console.log(resp)
+      this.productArr = resp
+
+    })
+  }
+
 }
+
+
+

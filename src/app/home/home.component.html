@@ -50,3 +50,14 @@
 </div>
 </div> -->
 
+
+<input type="text" [(ngModel)]="user">
+
+<button (click)="printHi()">Print HI</button>
+
+
+
+<button (click)="getProducts()">Get Products</button>
+
+
+<img [src]="el.image" alt="" *ngFor="let el of productArr">
