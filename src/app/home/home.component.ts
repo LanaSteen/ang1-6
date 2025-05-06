@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonService } from '../services/common.service';
 import { ApiService } from '../services/api.service';
 import { Product } from '../Models/Product';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -18,11 +19,12 @@ export class HomeComponent {
 
   }
 
+  useName = ""
+
   ngOnInit(){
     this.api.getProducts().subscribe((resp: any) => {
       console.log(resp)
       this.productArr = resp
-
     })
   }
 

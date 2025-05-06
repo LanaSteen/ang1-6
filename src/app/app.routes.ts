@@ -6,6 +6,7 @@ import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ProductsComponent } from './products/products.component';
 import { PorductsDetailComponent } from './products/porducts-detail/porducts-detail.component';
+import { DetailsComponent } from './details/details.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -17,4 +18,5 @@ export const routes: Routes = [
     {path: 'products', component: ProductsComponent},
     {path: 'products/:id', component: PorductsDetailComponent},
     {path: 'products/:id/:category', component: PorductsDetailComponent},
+    {path: 'details/:id', component: DetailsComponent},
 ];

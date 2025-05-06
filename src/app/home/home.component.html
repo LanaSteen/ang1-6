@@ -59,5 +59,14 @@
 
 <button (click)="getProducts()">Get Products</button>
 
+<input type="text" [(ngModel)]="useName">
 
-<img [src]="el.image" alt="" *ngFor="let el of productArr">
+<div class="card" style="width: 18rem;" *ngFor="let el of productArr">
+  <img [src]="el.image" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a routerLink="/details/{{el.id}}" class="btn btn-primary">See More</a>
+  </div>
+</div>
+
